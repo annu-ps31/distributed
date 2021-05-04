@@ -72,7 +72,6 @@ jobs:
 
       - name: Setup SSH
         shell: bash -l {0}
-        # FIXME no SSH available on Windows
         # https://github.com/dask/distributed/issues/4509
         if: ${{ matrix.os != 'windows-latest' }}
         run: bash continuous_integration/scripts/setup_ssh.sh
